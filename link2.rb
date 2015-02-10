@@ -36,16 +36,15 @@ class Browser
 		@page = Page.new(uri)
 		@links_arr = []
 	end
-	
+
 	def go
-		print_page_links
-	
+		#print_page_links
 		valid = true
 		while valid == true
+			print_page_links
 			puts
 			puts "Which link would you like to click on? (type 'exit' to quit)"
 			puts
-
 			x = 0
 			while x == 0
 				user_input = gets.chomp
@@ -60,14 +59,21 @@ class Browser
 					puts "please enter a valid link to enter"
 					x = 0
 				end
+				get_page = new_page
 			end
 		end
-		get_page = new_page
 		puts "You ended on the #{get_page.title} page!"
+		#p get_page
 	end
 end
 
-browser = Browser.new('http://www.classifiedsgiant.com/?affiliate_pro_tracking_id=2867:1:')
+puts "What website would you like to browse?"
+input = gets.chomp
+browser = Browser.new(input)
 browser.go
+
+
+
+
 
 
