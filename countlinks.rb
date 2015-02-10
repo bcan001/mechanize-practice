@@ -57,6 +57,10 @@ search_field.value = 'white leather couch'
 new_page = search_form.submit
 #p new_page.body
 p new_page.title
+#p new_page.body
+
+# this is the new page url, after the search_form is submitted
+p new_page.uri.to_s
 
 
 
