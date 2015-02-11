@@ -17,7 +17,7 @@ agent.get(current_page) do |page|
 	# Submit the login form
   login_form = new_page.form("login")
   login_form['inputEmailHandle'] = "bcaneba@gmail.com"
-  login_form['inputPassword'] = "theanswer"
+  login_form['inputPassword'] = ""
   final_page = login_form.submit
   p final_page.title
 
