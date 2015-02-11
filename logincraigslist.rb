@@ -38,7 +38,7 @@ class Agent
 end
 
 mech = Agent.new
-mech.login("bcaneba@gmail.com","theanswer")
+mech.login("bcaneba@gmail.com","")
 
 # current_page.uri.to_s => www.google.com
 
